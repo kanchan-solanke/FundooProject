@@ -1,0 +1,60 @@
+.mainTwo{
+        display: flex;
+        justify-content: center;
+        margin-top: -2%;
+        
+    }
+    .wholeone{
+        display: block;
+        flex-direction: column;
+        float: left;
+    }
+    .width{
+        height: 25%;
+   }
+        input{
+            border-style: none;
+        }
+    div .take{
+        margin-left: -17.5%;
+    }
+    .layout{
+        display: flex;
+        justify-content: left;
+    }
+    
+    .rightTwo{
+        margin-top: 2%;
+        display: inline;
+        justify-content: right;
+float: right;    }
+    .titleTwo{
+        display: inline;
+        flex-direction: row;
+        float: left;
+        margin: 1%;
+        padding-left: 1%;
+    }
+    .take{
+        padding-bottom: 3%;
+        padding-left:19%;
+        margin: 1%;
+        display: inline;
+        flex-direction: column;
+        float: left;
+    }
+    .down{
+        display: inline;
+        flex-direction: row;
+    float: left; 
+    margin: 12%;
+    margin-left: 1%;
+    }
+    .one,.nine,.two,.threeOne,.four,.five,.six,.seven,.eight{
+        display: inline;
+    padding: 15px;   
+    flex-direction: column;
+    float: left;
+    }
+
+   

@@ -1,0 +1,42 @@
+.container{
+    border: 2px solid grey;
+    box-shadow: 2;
+    margin: 3%;
+}
+.paper{
+    height: 50%;
+}
+.layout{
+    display: flex;
+    width: 50%;
+    justify-content: left;
+}
+
+.icons{
+    display: flex;
+    justify-content: right;
+}
+
+.right{
+    display: flex;
+    justify-content: right;
+    margin:20%
+}
+
+.whole{
+}
+
+.takenoteOne{
+    margin-top: 1%;
+    margin-left: 5px;
+    float: left;
+}
+input{
+    border-style: none;
+}
+.iconright{
+    margin-top:1%;
+    display: inline;
+    justify-content: space-around;
+    float: right;
+}

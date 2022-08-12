@@ -1,0 +1,18 @@
+.bunchIcon{
+    display: inline-flex;
+    margin-left: -10%;
+    justify-content: space-between;
+    padding: 3%;
+    flex-direction: row;
+}
+
+div .bunchIcon{
+    justify-content: space-between;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.typo{
+    margin-left: 2%;
+}

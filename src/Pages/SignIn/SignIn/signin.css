@@ -1,0 +1,131 @@
+body{
+    margin:5%;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    color: rgb(47, 44, 44);
+    width: 50vw;
+
+}
+h4{
+    display: block;
+    justify-content: center;
+    color: #202124;
+
+
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+        color: #202124;
+
+}
+
+.container{
+    box-sizing: border-box;
+    border: 2px solid rgb(69, 68, 68);
+    width:80%;
+    display:flex;
+    align-items: center;
+    height: 100vh;
+    margin-top:-3%;
+    margin-left: 50%;
+}
+.form-control-placeholder{
+    margin: 5%;
+}
+
+.form-container{
+    width:375px;
+    height:450px;
+    margin:auto;
+    position: relative;
+    padding:40px;
+    border:1px solid whitesmoke;
+}
+.form-group{
+    position: relative;
+}
+.form-group input{
+    width:100%;
+    padding:10px 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border:1px solid #d0d0d0;
+    font-size: 16px;
+}
+.form{
+   margin: 10px;
+   padding: 5px;
+
+}
+.first{
+    margin: 6px;
+padding: 10px;
+}
+.second{
+    margin: 6px;
+    padding: 10px;
+}
+.form-group label{
+    position: absolute;
+    left:10px;
+    top:9px;
+    color:darkgrey;
+    font-size:16px;
+    padding:0px 4px;
+    background-color: white;
+}
+.form-link{
+    padding:4px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.form-link a{
+    color:#1a73e8;
+}
+.form-link label{
+    color: #5f6368;
+    font-size: 14px;
+}
+#email  label{
+    color:#1a73e8;
+}
+
+
+#logo{
+    width:30%;
+    height: 60%;
+    margin:0 auto;
+}
+.btn{
+    float: right;
+    color: white;
+    background: #1a73e8;
+    border: 0;
+    padding:8px 22px;
+    border-radius: 4px;
+}
+
+a{
+    text-decoration: none;
+    justify-content: left;
+    display: block;
+}
+
+.form-link1 label a{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.form-link1 label{
+    font-size: 14px;
+    line-height: 1.4286;
+display: flex;
+flex-direction: row;
+justify-content: left;
+}
+
