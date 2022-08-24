@@ -1,15 +1,9 @@
 
 import './Header.css'
-
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -24,13 +18,13 @@ const Search = styled('div')(({ theme }) => ({
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginRight: theme.spacing(2),
+  marginRight: theme.spacing(4),
   marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(25),
-    width: '40%',
-    
+    marginLeft: theme.spacing(4),
+    width: '70%',
+
   },
 }));
 
@@ -47,44 +41,34 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '50ch',
     },
   },
 }));
 
- function Header() {
-   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <div className='image-two'>
-         <img class="header-logo" src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" alt="logo"></img>
+function Header(props) {
+  const handleDrawer = () => {
+    props.listenToHeader()
+  }
+  return (
+    <div class="header">
+      <div class="childone">
+        <p>  <MenuIcon onClick={handleDrawer}/></p>
+        <p>
+          <img class="header-logo" src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" alt="logo"></img>
+        </p>
+        <p> <Typography variant="h5">
+          Keep
+        </Typography>
+        </p>
       </div>
-      <div className='typo'>
-          <Typography
-            variant="h5"
-            noWrap
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            Keep
-          </Typography>
-          </div>
+      <div class="childtwo">
+        <span>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -93,40 +77,26 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
             />
-          </Search>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-           <div className='bunchIcon'>
-            <div>
-            <div className='refresh'><RefreshIcon /></div>
+          </Search></span>
+      </div>
+      <div class="childthree">
+        <p><RefreshIcon /></p>
+        <p><DragHandleIcon /></p>
+        <p><SettingsIcon /></p>
 
-            </div>
-           <div className='drag'><DragHandleIcon/></div>
-           
-           <div className='setting'><SettingsIcon/></div>
-           <div className='dots'><AppsIcon/></div>
-           <AccountCircle />
+      </div>
 
-           </div>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-haspopup="true"
-              color="inherit"
-            >
-            </IconButton>
-          </Box>
-         
-   </Toolbar>
-      </AppBar>
-      </Box> 
-     
+      <div class="childfour">
+        <p><AppsIcon /></p>
+        <p><AccountCircle /></p>
+      </div>
+      
+    </div>
 
   )
-} 
+}
 
- 
+
 
 
 export default Header

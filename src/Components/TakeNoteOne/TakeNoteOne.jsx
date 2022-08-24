@@ -1,51 +1,41 @@
 
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import CheckBoxIcon from '@material-ui/icons/CheckBox';
-import BrushIcon from '@material-ui/icons/Brush';
-import ImageIcon from '@material-ui/icons/Image';
+import IconButton from '@mui/material/IconButton';
+import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
+import BrushIcon from '@mui/icons-material/Brush';
+import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
+import InputBase from '@mui/material/InputBase';
 import './TakeNoteOne.css';
-function TakeNoteOne() {
-    
-     
+
+function TakeNoteOne(props) {
+
+  const listeningToTakeNoteOne = () => {
+    props.listenToTakeNoteOne()
+  }
+
   return (
-    <div>
-      <div className='containerOne'>
-        <div className='layout'>
-          <Box
-            sx={{
-              '& > :not(style)': {
-                width: 750,
-                height: 150,
-                margin: 5,
+    <div className='noteOne_outer-box' onClick={listeningToTakeNoteOne}>
+      <div className="noteOne_inner-box">
+        {/* <div className='containerOne' onClick={listeningToTakeNoteOne}> */}
 
+        <InputBase className='noteOne_input-base' placeholder="Take a note..." fullWidth />
 
-              },
-            }}
-          >
-            <div >
-            <Paper className='paper' elevation={4}>
-              <div className='whole'>
-              <div className='takenoteOne'>
-              <input type='text' id='takenoteone' placeholder='Take a note...'></input>         
- </div>
- <div className='iconright'>
- <CheckBoxIcon  />
-            <BrushIcon />
-            <ImageIcon />
- </div>
- </div>
-            </Paper>
-            </div>
+        <IconButton aria-label="New list" size='large'>
+          <CheckBoxOutlinedIcon />
+        </IconButton>
 
-            
-          </Box>
-          
+        <IconButton aria-label="New note with drawing" size='large'>
+          <BrushIcon />
+        </IconButton>
 
-        </div>
+        <IconButton aria-label="New note with image" size='large'>
+          <ImageOutlinedIcon />
+        </IconButton>
+
       </div>
     </div>
+
+
   )
 }
 

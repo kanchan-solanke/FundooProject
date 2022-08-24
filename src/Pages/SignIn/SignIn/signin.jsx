@@ -19,7 +19,10 @@ function SignIn() {
     passwordHelper: "",
   });
   const takeEmail = (event) => {
-    setSigninObj((prevState) => ({ ...prevState, email: event.target.value }));
+    setSigninObj((prevState) => 
+    (
+      { ...prevState, email: event.target.value }
+      ));
   };
   const takePass = (event) => {
     setSigninObj((prevState) => ({
@@ -62,8 +65,8 @@ function SignIn() {
 
 if(emailTest===true && passwordTest===true)
 console.log(emailTest + " "+ passwordTest)
-signIn(siginObj).then((response) => {console.log(response)}).catch((error) => {console.log(error)})
-  }  
+signIn(siginObj).then((response) => {console.log(response);localStorage.setItem("Token", response.data.data)}).catch((error) => {console.log(error)})
+}  
 return (
     <div className="container">
       <div className="form-container">

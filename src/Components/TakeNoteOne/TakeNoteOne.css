@@ -1,42 +1,27 @@
-.container{
-    border: 2px solid grey;
-    box-shadow: 2;
-    margin: 3%;
-}
-.paper{
-    height: 50%;
-}
-.layout{
+/* *{
+    box-sizing: border-box;
+} */
+
+.noteOne_outer-box{
+    width: 100vw;
+    min-height: 48px;
     display: flex;
-    width: 50%;
-    justify-content: left;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 16px
 }
 
-.icons{
+.noteOne_inner-box{
     display: flex;
-    justify-content: right;
+    width: 600px;
+    height: 48px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
 }
 
-.right{
-    display: flex;
-    justify-content: right;
-    margin:20%
-}
-
-.whole{
-}
-
-.takenoteOne{
-    margin-top: 1%;
-    margin-left: 5px;
-    float: left;
-}
-input{
-    border-style: none;
-}
-.iconright{
-    margin-top:1%;
-    display: inline;
-    justify-content: space-around;
-    float: right;
+.noteOne_input-base{
+    margin-left: 12px;
 }

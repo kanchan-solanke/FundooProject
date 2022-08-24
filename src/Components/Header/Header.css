@@ -1,18 +1,48 @@
-.bunchIcon{
-    display: inline-flex;
-    margin-left: -10%;
-    justify-content: space-between;
-    padding: 3%;
-    flex-direction: row;
-}
+* {
+    margin: 0;
+  }
 
-div .bunchIcon{
-    justify-content: space-between;
-    width: 100%;
-    display: inline-flex;
+  .header {
+    border: 1px solid rgb(151, 148, 148);
+    width: 100vw;
+    height: 10vh;
+    display: flex;
     flex-direction: row;
-}
+    justify-content: space-around;
+    align-items: center;
+  }
+  .childone {
+    width: 12%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -3rem;
+  }
+  .childtwo {
+    border: 2px solid black;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px 4px 4px 4px ;
 
-.typo{
-    margin-left: 2%;
-}
+  }
+
+  .childthree {
+    width: 10%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .childfour {
+    width: 7%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
